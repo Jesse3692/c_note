@@ -1,8 +1,8 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 
-int main(int argc, char **argv)
+int main()
 {
-    printf("Hello, Linux.\n");
-    exit(0);
+    printf("Hello, Clang!\n");
+    getchar();
+    return 0;
 }
