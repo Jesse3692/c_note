@@ -12,7 +12,7 @@
 
 仅执行编译操作，不进行连接操作
 
-`gcc -c file_name`
+ `gcc -c file_name`
 
 ## 第一个C程序
 
@@ -67,7 +67,7 @@ c语言程序中，包含字面量和变量。
 
 #### 1. 整型（整数类型）
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -79,11 +79,11 @@ int main()
 }
 ```
 
-这里的 `%d`跟python中是一样的。
+这里的 `%d` 跟python中是一样的。
 
 #### 2. 浮点型
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -101,7 +101,7 @@ int main()
 
 在程序中，使用英文单引号括起来的字符被称为字符型。
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -122,7 +122,7 @@ int main()
 
 在程序中，使用英文引号将若干个字符括起来的都是字符串。
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -169,9 +169,9 @@ c语言中具有特殊用途的单词被称为关键字。
 
 #### 1. 整数类型
 
-int可以定义整数类型。int类型数据在printf函数中一般采用`%d`格式进行输出，`%d`表示“十进制整数”
+int可以定义整数类型。int类型数据在printf函数中一般采用 `%d` 格式进行输出， `%d` 表示“十进制整数”
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -193,7 +193,7 @@ int main()
 
 **注意：给float赋值字面量的时候需要以f结尾**
 
-```c
+``` c
 #include <stdio.h>
 
 int main()
@@ -211,7 +211,7 @@ int main()
 
 char类型
 
-```c
+``` c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -223,3 +223,65 @@ int main(int argc, char **argv)
 }
 ```
 
+#### 4. 转义字符
+
+在c语言中，有一类特殊字符，该字符是以字符 `\` 开头的字符序列。由于这类字符无法用一般形式表示，只能采用这种特殊的形式表示，这类字符被称为转义字符。
+
+1. `\n`回车换行
+
+``` c
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   int main(int argc, char **argv)
+   {
+       printf("www.example.com\n");
+       printf("http://www.example.\ncom\n");
+       exit(0);
+   }
+```
+
+2. `\"` 代表双引号字符（“）
+
+``` c
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   int main(int argc, char **argv)
+   {
+       printf("www.example.\"com\n");
+       exit(0);
+   }
+```
+
+3. `\\` 表示单斜线`\`
+
+``` c
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   int main(int argc, char **argv)
+   {
+       printf("%c\n", '\\');
+       printf("www.\\example.com\n");
+       exit(0);
+   }
+```
+
+#### 5. printf与数据类型
+
+| 占位符 | 类型   | 说明                         |
+| ------ | ------ | ---------------------------- |
+| `%d` | int    | 以十进制输出                 |
+| `f` | float  | 指定精度， `%.2f` 保留两位小数 |
+| `lf` | double |                              |
+| `%c` | char   | 也可以用 `%d` 来输出ASCII码    |
+| `%s` | 字符串 |                              |
+
+### 注释
+
+单行注释： `//`
+
+多行注释（块注释）： `/* */`
+
+### 变量
