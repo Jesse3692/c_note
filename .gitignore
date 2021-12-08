@@ -54,3 +54,4 @@ dkms.conf
 .idea/
 id_rsa*
 .history
+.vscode/
